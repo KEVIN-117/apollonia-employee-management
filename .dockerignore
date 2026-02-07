@@ -1,0 +1,33 @@
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# TypeScript
+dist
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.*
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# Git
+.git
+.gitignore
+
+# Editor / OS
+.vscode
+.idea
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Tests & coverage
+coverage

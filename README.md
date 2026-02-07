@@ -33,6 +33,7 @@ This project serves as an initial step toward a larger system that may later inc
 - MongoDB
 - Mongoose
 - dotenv
+- TypeScript
 
 ### Frontend
 
@@ -48,17 +49,6 @@ This project serves as an initial step toward a larger system that may later inc
 ---
 
 ## 📐 System Architecture
-
-```
-Browser (HTML/CSS/JS)
-|
-v
-REST API (Node.js + Express)
-|
-v
-MongoDB
-
-```
 
 The application follows a modular and scalable architecture, separating concerns between:
 
@@ -87,17 +77,17 @@ The application follows a modular and scalable architecture, separating concerns
 
 ### Departments
 
-- `GET /api/departments`
-- `POST /api/departments`
-- `PUT /api/departments/:id`
-- `DELETE /api/departments/:id`
+- `GET /api/v1/departments`
+- `POST /api/v1/departments`
+- `PUT /api/v1/departments/:id`
+- `DELETE /api/v1/departments/:id`
 
 ### Employees
 
-- `GET /api/employees`
-- `POST /api/employees`
-- `PUT /api/employees/:id`
-- `DELETE /api/employees/:id`
+- `GET /api/v1/employees`
+- `POST /api/v1/employees`
+- `PUT /api/v1/employees/:id`
+- `DELETE /api/v1/employees/:id`
 
 ---
 
@@ -111,13 +101,7 @@ The application follows a modular and scalable architecture, separating concerns
 ### Steps
 
 ```bash
-docker-compose up --build
-````
-
-The API will be available at:
-
-```
-http://localhost:3000
+docker-compose up -d
 ```
 
 MongoDB will run in a separate container with persistent storage.
@@ -132,9 +116,10 @@ backend/
  │   ├── config/
  │   ├── models/
  │   ├── controllers/
+ |   ├── services/
  │   ├── routes/
- │   ├── app.js
- │   └── server.js
+ │   ├── app.ts
+ │   └── server.ts
  ├── Dockerfile
  ├── package.json
  └── .env
@@ -151,7 +136,5 @@ backend/
 - Revenue reporting
 
 ---
-
-## 👤 Author
 
 Developed as a practice project for learning full-stack development with Node.js and MongoDB.
